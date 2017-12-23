@@ -44,7 +44,7 @@ public class GetNemMessage {
                     сообщение - объект по образцу
                     {"from":{"id":"код_отправителя", "name":"имя_отправителя"}, "content":"текст_сообщения", "date":"дата"}
                 */
-                result += "{\"from\":\""+rs1.getString("fromuser")+"\"";
+                result += "{\"from\":{\"id\":\""+rs1.getString("fromuser")+"\",\"name\':\""+rs1.getString("username")+"\"},";
                 // получение имени отправителя rs1.getString("username")
                 result += ",\"content\":\""+rs1.getString("content")+"\"";
                 result += ",\"date\":\""+rs1.getString("datemsg")+"\"},";
